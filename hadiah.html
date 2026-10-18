@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi | Rahmat & Sarimah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --silver-primary: #e2e8f0;
+            --silver-accent: #94a3b8;
+            --bg-dark: #090a0f;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border-silver: rgba(226, 232, 240, 0.2);
+            --text-main: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding-bottom: 95px; }
+
+        .container { max-width: 480px; margin: 0 auto; padding: 30px 20px; text-align: center; }
+
+        .glass-card { background: var(--card-bg); backdrop-filter: blur(18px); border: 1px solid var(--border-silver); border-radius: 20px; padding: 25px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); margin-bottom: 20px; }
+
+        h2 { font-family: 'Playfair Display', serif; color: var(--silver-primary); font-size: 1.5rem; margin-bottom: 15px; }
+
+        .contact-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+        .contact-item { background: rgba(255,255,255,0.03); border: 1px solid var(--border-silver); padding: 12px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: #fff; transition: 0.3s; }
+        .contact-item:hover { background: rgba(226, 232, 240, 0.1); }
+        .contact-name { font-size: 0.85rem; font-weight: 500; text-align: left; }
+        .contact-num { font-size: 0.8rem; color: var(--silver-primary); }
+
+        /* Floating Nav Bar */
+        .navbar { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 92%; max-width: 440px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); border: 1px solid var(--border-silver); border-radius: 30px; display: flex; justify-content: space-around; padding: 12px 10px; z-index: 100; }
+        .nav-link { color: #64748b; text-decoration: none; font-size: 0.72rem; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .nav-link.active { color: var(--silver-primary); font-weight: 600; }
+        .nav-link span.icon { font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="glass-card">
+            <h2>Hubungi Kami</h2>
+            <p style="font-size: 0.82rem; color: var(--silver-accent); margin-bottom: 15px;">
+                Sebarang pertanyaan boleh hubungi talian di bawah[cite: 1]:
+            </p>
+
+            <div class="contact-grid">
+                <a href="tel:0122719861" class="contact-item">
+                    <span class="contact-name">RAHMAT</span>
+                    <span class="contact-num">012-2719861</span>
+                </a>
+                <a href="tel:0102335793" class="contact-item">
+                    <span class="contact-name">SARIMAH</span>
+                    <span class="contact-num">010-2335793</span>
+                </a>
+                <a href="tel:0182669343" class="contact-item">
+                    <span class="contact-name">ALONG FIQA</span>
+                    <span class="contact-num">018-2669343</span>
+                </a>
+                <a href="tel:01121942535" class="contact-item">
+                    <span class="contact-name">ANGAH FIRA</span>
+                    <span class="contact-num">011-21942535</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-link"><span class="icon">🏠</span>Utama</a>
+        <a href="pasangan.html" class="nav-link"><span class="icon">💍</span>Pasangan</a>
+        <a href="tarikh.html" class="nav-link"><span class="icon">📅</span>Atur Cara</a>
+        <a href="rsvp.html" class="nav-link"><span class="icon">💌</span>RSVP</a>
+        <a href="hadiah.html" class="nav-link active"><span class="icon">📞</span>Hubungi</a>
+    </nav>
+
+</body>
+</html>
