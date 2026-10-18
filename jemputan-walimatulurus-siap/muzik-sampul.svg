@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title description">
+  <title id="title">Ilustrasi rekod muzik perak</title>
+  <desc id="description">Rekod hitam dengan label kelabu perak dan corak cahaya yang lembut.</desc>
+  <defs>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dce0e5"/>
+      <stop offset=".5" stop-color="#8e97a2"/>
+      <stop offset="1" stop-color="#404a54"/>
+    </linearGradient>
+    <radialGradient id="disc" cx=".33" cy=".25" r=".82">
+      <stop offset="0" stop-color="#48515b"/>
+      <stop offset=".48" stop-color="#171e25"/>
+      <stop offset="1" stop-color="#090d11"/>
+    </radialGradient>
+  </defs>
+  <rect width="256" height="256" rx="30" fill="#131c20"/>
+  <circle cx="128" cy="128" r="101" fill="url(#cover)" opacity=".9"/>
+  <circle cx="128" cy="128" r="82" fill="url(#disc)" stroke="#e7e9ec" stroke-opacity=".24"/>
+  <circle cx="128" cy="128" r="69" fill="none" stroke="#c7cbd1" stroke-opacity=".17"/>
+  <circle cx="128" cy="128" r="57" fill="none" stroke="#c7cbd1" stroke-opacity=".18"/>
+  <circle cx="128" cy="128" r="44" fill="none" stroke="#c7cbd1" stroke-opacity=".18"/>
+  <circle cx="128" cy="128" r="31" fill="#b8bec6"/>
+  <circle cx="128" cy="128" r="24" fill="#777f89"/>
+  <path d="M128 103v27.5a8.5 8.5 0 1 1-5-7.8V110l21-5v19.5a8.5 8.5 0 1 1-5-7.8V99z" fill="#f2f3f5"/>
+  <path d="M53 66q14-15 31-18M176 208q16-7 25-20" fill="none" stroke="#fff" stroke-opacity=".52" stroke-linecap="round" stroke-width="2"/>
+</svg>

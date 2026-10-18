@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#08120f">
+    <title>RSVP | Walimatulurus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="page-top" data-reveal>
+            <p class="eyebrow">Kehadiran anda bermakna</p>
+            <h1 class="page-title">Sahkan kehadiran</h1>
+            <p class="page-subtitle">Maklumkan kepada kami supaya persiapan majlis dapat diatur dengan sebaiknya.</p>
+        </header>
+
+        <section class="glass-card" data-reveal>
+            <form data-rsvp-form>
+                <div class="form-group">
+                    <label for="guest-name">Nama penuh</label>
+                    <input id="guest-name" name="name" type="text" class="form-control" required autocomplete="name" placeholder="cth: Ahmad bin Ali">
+                </div>
+                <div class="form-group">
+                    <label for="attendance">Status kehadiran</label>
+                    <select id="attendance" name="attendance" class="form-control" required>
+                        <option value="Hadir">Insya-Allah, saya hadir</option>
+                        <option value="Tidak hadir">Maaf, tidak dapat hadir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Bilangan tetamu (termasuk anda)</label>
+                    <input id="guests" name="guests" type="number" class="form-control" min="1" value="1" required inputmode="numeric">
+                </div>
+                <div class="form-group">
+                    <label for="message">Ucapan &amp; doa <span style="color: var(--muted); font-weight: 400;">(pilihan)</span></label>
+                    <textarea id="message" name="message" class="form-control" rows="3" placeholder="Titipkan ucapan buat pasangan..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">Hantar melalui WhatsApp <span aria-hidden="true">→</span></button>
+                <p class="contact-note">Mesej pengesahan akan dibuka dalam WhatsApp untuk dihantar kepada Rahmat.</p>
+            </form>
+        </section>
+    </main>
+
+    <nav class="navbar" aria-label="Navigasi utama">
+        <a href="index.html" class="nav-link"><span class="icon" aria-hidden="true">⌂</span>Utama</a>
+        <a href="pasangan.html" class="nav-link"><span class="icon" aria-hidden="true">♡</span>Pasangan</a>
+        <a href="tarikh.html" class="nav-link"><span class="icon" aria-hidden="true">◷</span>Atur cara</a>
+        <a href="rsvp.html" class="nav-link active" aria-current="page"><span class="icon" aria-hidden="true">✉</span>RSVP</a>
+        <a href="galeri.html" class="nav-link"><span class="icon" aria-hidden="true">▧</span>Galeri</a>
+        <a href="hadiah.html" class="nav-link"><span class="icon" aria-hidden="true">☏</span>Hubungi</a>
+    </nav>
+    <script src="script.js"></script>
+</body>
+</html>
