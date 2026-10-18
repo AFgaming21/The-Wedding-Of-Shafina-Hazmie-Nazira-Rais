@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atur Cara & Lokasi | Rahmat & Sarimah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --silver-primary: #e2e8f0;
+            --silver-accent: #94a3b8;
+            --bg-dark: #090a0f;
+            --card-bg: rgba(255, 255, 255, 0.04);
+            --border-silver: rgba(226, 232, 240, 0.2);
+            --text-main: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg-dark); color: var(--text-main); min-height: 100vh; padding-bottom: 95px; }
+
+        .container { max-width: 480px; margin: 0 auto; padding: 30px 20px; text-align: center; }
+
+        .glass-card { background: var(--card-bg); backdrop-filter: blur(18px); border: 1px solid var(--border-silver); border-radius: 20px; padding: 25px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.5); margin-bottom: 20px; }
+
+        h2 { font-family: 'Playfair Display', serif; color: var(--silver-primary); font-size: 1.5rem; margin-bottom: 12px; }
+
+        .countdown { display: flex; justify-content: center; gap: 8px; margin: 15px 0; }
+        .time-box { background: rgba(226, 232, 240, 0.08); border: 1px solid var(--border-silver); padding: 8px; border-radius: 8px; min-width: 60px; }
+        .time-box span { display: block; font-size: 1.1rem; font-weight: bold; color: var(--silver-primary); }
+        .time-box label { font-size: 0.6rem; text-transform: uppercase; color: var(--silver-accent); }
+
+        .btn { display: inline-block; background: var(--silver-primary); color: #0f172a; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-size: 0.82rem; font-weight: 600; margin: 5px; transition: 0.3s; }
+        .btn.secondary { background: transparent; border: 1px solid var(--silver-primary); color: var(--silver-primary); }
+
+        /* Floating Nav Bar */
+        .navbar { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 92%; max-width: 440px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); border: 1px solid var(--border-silver); border-radius: 30px; display: flex; justify-content: space-around; padding: 12px 10px; z-index: 100; }
+        .nav-link { color: #64748b; text-decoration: none; font-size: 0.72rem; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .nav-link.active { color: var(--silver-primary); font-weight: 600; }
+        .nav-link span.icon { font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="glass-card">
+            <h2>Tarikh & Masa</h2>
+            <p style="font-size: 1rem; font-weight: 600; color: #fff;">AHAD, 01 NOV 2026</p>
+            <p style="font-size: 0.82rem; color: var(--silver-accent); margin-top: 5px;">Atur Acara Majlis: 11:00 AM - 4:00 PM</p>
+
+            <div class="countdown">
+                <div class="time-box"><span id="days">00</span><label>Hari</label></div>
+                <div class="time-box"><span id="hours">00</span><label>Jam</label></div>
+                <div class="time-box"><span id="minutes">00</span><label>Minit</label></div>
+                <div class="time-box"><span id="seconds">00</span><label>Saat</label></div>
+            </div>
+        </div>
+
+        <div class="glass-card">
+            <h2>Lokasi Majlis</h2>
+            <p style="font-size: 0.88rem; font-weight: 500; line-height: 1.6; margin-bottom: 15px;">
+                LOT 91 JLN LABU 8<br>
+                (LORONG RAHMAT)<br>
+                BATU 10 LABU, SEREMBAN N9
+            </p>
+            <div>
+                <a href="https://maps.google.com/?q=LOT+91+JLN+LABU+8+BATU+10+LABU+SEREMBAN" target="_blank" class="btn">📍 Google Maps</a>
+                <a href="https://waze.com/ul?q=BATU+10+LABU+SEREMBAN" target="_blank" class="btn secondary">🚗 Waze</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-link"><span class="icon">🏠</span>Utama</a>
+        <a href="pasangan.html" class="nav-link"><span class="icon">💍</span>Pasangan</a>
+        <a href="tarikh.html" class="nav-link active"><span class="icon">📅</span>Atur Cara</a>
+        <a href="rsvp.html" class="nav-link"><span class="icon">💌</span>RSVP</a>
+        <a href="hadiah.html" class="nav-link"><span class="icon">📞</span>Hubungi</a>
+    </nav>
+
+    <script>
+        const weddingDate = new Date("Nov 1, 2026 11:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+        }, 1000);
+    </script>
+</body>
+</html>
